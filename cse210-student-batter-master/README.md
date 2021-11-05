@@ -39,4 +39,4 @@ root                    (project root folder)
 
 ## Authors
 ---
-* # TODO: Add your names and emails here
+* Reece Mickelson - mmickelson108@gmail.com
