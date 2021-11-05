@@ -1,0 +1,2 @@
+class HandleCollisionsAction:
+    pass

@@ -1,0 +1,2 @@
+class MoveActorsAction:
+    pass
