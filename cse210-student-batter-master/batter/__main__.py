@@ -16,29 +16,33 @@ def main(screen):
     # create the cast {key: tag, value: list}
     cast = {}
 
-    x = int(constants.MAX_X / 2)
+    paddle = Actor()
+    paddle.set_tag("paddle")
+    paddle.set_text("===========")
+    x = int(constants.MAX_X / 2 - 5)
     y = int(constants.MAX_Y - 1)
     position = Point(x, y)
-    paddle = Actor()
-    paddle.set_text("===========")
     paddle.set_position(position)
     cast["paddle"] = [paddle]
 
-    cast["brick"] = []
-    for x in range(5, 75):
-        for y in range(2, 6):
+    row = []
+    for x in range(5, constants.COL + 5):
+        for y in range(2, constants.ROW + 2):
             position = Point(x, y)
             brick = Actor()
+            brick.set_tag("brick")
             brick.set_text("∨")
             brick.set_position(position)
-            cast["brick"].append(brick)
+            row.append(brick)
+    cast["brick"] = row
 
     x = int(constants.MAX_X / 2)
     y = int(constants.MAX_Y / 2)
-    position = Point(x, y)
-    velocity = Point(1, -1)
+    position = Point(x , y)
+    velocity = Point(0 , 1)
     ball = Actor()
     ball.set_text("o")
+    ball.set_tag("ball")
     ball.set_position(position)
     ball.set_velocity(velocity)
     cast["ball"] = [ball]

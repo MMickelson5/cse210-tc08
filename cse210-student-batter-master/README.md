@@ -40,3 +40,4 @@ root                    (project root folder)
 ## Authors
 ---
 * Reece Mickelson - mmickelson108@gmail.com
+* Jorge Flores - jafc120@gmail.com
