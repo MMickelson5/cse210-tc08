@@ -1,5 +1,6 @@
 from game.action import Action
 
+
 class DrawActorsAction(Action):
     """A code template for drawing actors. The responsibility of this class of
     objects is use an output service to draw all actors on the screen.

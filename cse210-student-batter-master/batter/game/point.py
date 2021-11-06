@@ -8,7 +8,7 @@ class Point:
         _x (integer): The horizontal distance.
         _y (Point): The vertical distance.
     """
-    
+
     def __init__(self, x, y):
         """The class constructor.
         
@@ -66,7 +66,7 @@ class Point:
             boolean: True if x = 0 and y = 0; false if otherwise.
         """
         return self._x == 0 and self._y == 0
-        
+
     def reverse(self):
         """Gets a new Point that is the reverse of this one.
         

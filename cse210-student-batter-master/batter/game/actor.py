@@ -1,9 +1,9 @@
-from game import constants
 from game.point import Point
 
+
 class Actor:
-    """A visible, moveable thing that participates in the game. The responsibility of Actor is to keep track of its appearance, position 
-    and velocity in 2d space.
+    """A visible, moveable thing that participates in the game. The responsibility of Actor is to keep track of its
+    appearance, position and velocity in 2d space.
 
     Stereotype:
         Information Holder
@@ -29,7 +29,7 @@ class Actor:
         Returns:
             string: The artifact's description.
         """
-        return self._description 
+        return self._description
 
     def get_position(self):
         """Gets the actor's position in 2d space.
@@ -38,7 +38,7 @@ class Actor:
             Point: The actor's position in 2d space.
         """
         return self._position
-    
+
     def get_text(self):
         """Gets the actor's textual representation.
         
@@ -54,7 +54,7 @@ class Actor:
             Point: The actor's speed and direction.
         """
         return self._velocity
-    
+
     def set_description(self, description):
         """Updates the actor's description to the given one.
         
@@ -70,7 +70,7 @@ class Actor:
             position (Point): The given position.
         """
         self._position = position
-    
+
     def set_text(self, text):
         """Updates the actor's text to the given value.
         
@@ -83,9 +83,9 @@ class Actor:
         """Updates the actor's velocity to the given one.
         
         Args:
-            position (Point): The given velocity.
+            velocity (Point): The given velocity.
         """
         self._velocity = velocity
-    
+
     def set_tag(self, tag):
         self._tag = tag

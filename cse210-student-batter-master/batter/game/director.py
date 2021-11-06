@@ -1,6 +1,7 @@
 from time import sleep
 from game import constants
 
+
 class Director:
     """A code template for a person who directs the game. The responsibility of 
     this class of objects is to control the sequence of play.
@@ -12,7 +13,7 @@ class Director:
         _cast (dictionary): The game actors {key: name, value: object}
         _script (dictionary): The game actions {key: tag, value: object}
     """
-    
+
     def __init__(self, cast, script):
         """The class constructor.
         
@@ -22,7 +23,7 @@ class Director:
         """
         self._cast = cast
         self._script = script
-        
+
     def start_game(self):
         """Starts the game loop to control the sequence of play."""
         while True:
@@ -36,6 +37,6 @@ class Director:
         
         Args:
             tag (string): The given tag.
-        """ 
+        """
         for action in self._script[tag]:
             action.execute(self._cast)
