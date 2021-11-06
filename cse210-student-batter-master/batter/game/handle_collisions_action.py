@@ -29,6 +29,10 @@ class HandleCollisionsAction(Action):
         elif (ball.get_position().get_x() in range(paddle.get_position().get_x() + 7, paddle.get_position().get_x() + 11)) and (ball.get_position().get_y() == paddle.get_position().get_y()):
             point = Point(1, -1)
             ball.set_velocity(point)
+
+        #walls
+        elif (ball.get_position().get_x() + ball.get_velocity().get_x() == 0) or (ball.get_position().get_x() + ball.get_velocity().get_x() == constants.MAX_X - 1):
+            ball.set_velocity(Point(ball.get_velocity().get_x() * -1, ball.get_velocity().get_y()))
         
         elif (ball.get_position().get_y() == constants.MAX_Y - 1):
             sys.exit()
