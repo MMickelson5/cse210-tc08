@@ -16,17 +16,17 @@ class HandleCollisionsAction(Action):
         row = cast["brick"]
         
         #left
-        if (ball.get_position().get_x() in range(paddle.get_position().get_x(), paddle.get_position().get_x() + 4)) and (ball.get_position().get_y() == paddle.get_position().get_y()):
+        if (ball.get_position().get_x() in range(paddle.get_position().get_x(), paddle.get_position().get_x() + 4)) and (ball.get_position().get_y() + 1 == paddle.get_position().get_y()):
             point = Point(-1, -1)
             ball.set_velocity(point)
         
         #middle
-        elif (ball.get_position().get_x() in range(paddle.get_position().get_x() + 4, paddle.get_position().get_x() + 7)) and (ball.get_position().get_y() == paddle.get_position().get_y()):
+        elif (ball.get_position().get_x() in range(paddle.get_position().get_x() + 4, paddle.get_position().get_x() + 7)) and (ball.get_position().get_y() + 1 == paddle.get_position().get_y()):
             point = Point(0, -1)
             ball.set_velocity(point)
         
         #right
-        elif (ball.get_position().get_x() in range(paddle.get_position().get_x() + 7, paddle.get_position().get_x() + 11)) and (ball.get_position().get_y() == paddle.get_position().get_y()):
+        elif (ball.get_position().get_x() in range(paddle.get_position().get_x() + 7, paddle.get_position().get_x() + 11)) and (ball.get_position().get_y() + 1 == paddle.get_position().get_y()):
             point = Point(1, -1)
             ball.set_velocity(point)
 
