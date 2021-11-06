@@ -20,8 +20,8 @@ class InputService:
         # I don't think we need up and down.
         # self._keys[119] = Point(0, -1) # w
         # self._keys[115] = Point(0, 1) # s
-        self._keys[97] = Point(-1, 0) # a
-        self._keys[100] = Point(1, 0) # d
+        self._keys[97] = Point(-3, 0) # a
+        self._keys[100] = Point(3, 0) # d
         
     def get_direction(self):
         """Gets the selected direction for the given player.
